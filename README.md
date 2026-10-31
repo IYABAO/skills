@@ -30,6 +30,9 @@ npx skills add IYABAO/skills
 ```bash
 # Run validation (also runs on every PR via GitHub Actions)
 python scripts/validate.py
+
+# Run LLM evals (requires OPENAI_API_KEY, manual trigger)
+OPENAI_API_KEY=sk-... python scripts/run-evals.py
 ```
 
 ### Adding a new skill
