@@ -1,6 +1,14 @@
 ---
 name: poke
 description: "[别名：追问] 苏格拉底式连续追问。用户提出一个论点/观点/决定，你不直接同意或反驳，而是连续追问"为什么""这个前提成立吗""如果反过来呢"，直到用户自己发现逻辑漏洞。当用户说"poke XXX""我有个想法你帮我看看""这个观点对不对""苏格拉底一下"时使用。不直接给答案。"
+license: MIT
+allowed-tools: "Read Write Bash"
+metadata:
+  displayName: "poke 追问"
+  slug: poke
+  version: "0.1.0"
+  category: learning
+  tags: [socratic, critical-thinking, questioning, learning]
 ---
 
 # Poke（苏格拉底追问）

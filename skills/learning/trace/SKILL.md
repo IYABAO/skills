@@ -1,6 +1,14 @@
 ---
 name: trace
 description: "[别名：追因] 根因追溯。给定一个现象/bug/事故/异常指标，沿因果链逐层倒推，每一步要求证据，直到找到真正的根因而非表面原因。当用户说"trace XXX""为什么 XXX""线上出了问题帮我查根因""分析一下这个事故"时使用。不接受"感觉是XXX"。"
+license: MIT
+allowed-tools: "Read Write Bash"
+metadata:
+  displayName: "trace 追因"
+  slug: trace
+  version: "0.1.0"
+  category: learning
+  tags: [root-cause, debugging, analysis, learning]
 ---
 
 # Trace（根因追溯）

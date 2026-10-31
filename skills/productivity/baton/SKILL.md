@@ -1,6 +1,14 @@
 ---
 name: baton
 description: "[别名：交接] 项目完整交接。把当前项目的所有关键信息打包成一份接手文档，让下一个人/agent 不看聊天记录也能从零上手。触发时自动扫项目目录，汇总：项目是什么、怎么跑、当前做到哪、TODO、关键决策、坑、注意事项，输出 HANDOVER.md。当用户说"baton""交接项目""把这个项目交出去""写交接文档""新人接手""换人了""这个项目不要了交出去"时使用。"
+license: MIT
+allowed-tools: "Read Write Bash"
+metadata:
+  displayName: "baton 交接"
+  slug: baton
+  version: "0.1.0"
+  category: productivity
+  tags: [handoff, documentation, project, productivity]
 ---
 
 # Baton（项目交接）

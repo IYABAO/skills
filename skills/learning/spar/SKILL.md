@@ -1,6 +1,14 @@
 ---
 name: spar
 description: "[别名：对练] 模拟技术面试对练。给定一个方向（Go 并发/系统设计/数据库/分布式），出一道题，连环追问你答得好不好，最后给评分卡。当用户说"spar XXX""模拟面试 XXX""面试对练 XXX""考我 XXX""我要练 XXX 面试题"时使用。不喂答案，答不上来就记下来当回去补的点。"
+license: MIT
+allowed-tools: "Read Write Bash"
+metadata:
+  displayName: "spar 对练"
+  slug: spar
+  version: "0.1.0"
+  category: learning
+  tags: [interview, mock-interview, practice, learning]
 ---
 
 # Spar（技术面试对练）
