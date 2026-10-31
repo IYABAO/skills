@@ -1,7 +1,7 @@
 {
   "name": "iyabao-skills",
-  "version": "0.3.0",
-  "description": "Learning & thinking skills by IYABAO: drill (expert roadmap), liken (cross-domain taste), knowpitch (football-tactic knowledge), spar (mock interview), poke (Socratic questioning), trace (root cause analysis), vet (information review), memo (file memory & context persistence).",
+  "version": "0.4.0",
+  "description": "Learning, thinking, and workflow skills by IYABAO: drill (expert roadmap), liken (cross-domain taste), knowpitch (football-tactic knowledge), spar (mock interview), poke (Socratic questioning), trace (root cause analysis), vet (information review), memo (file memory), pulse (progress report), panel (multi-role plan review).",
   "author": {
     "name": "林壮 (IYABAO)",
     "githubUsername": "IYABAO"
@@ -15,6 +15,8 @@
     "skills/learning/poke",
     "skills/learning/trace",
     "skills/learning/vet",
-    "skills/productivity/memo"
+    "skills/productivity/memo",
+    "skills/productivity/pulse",
+    "skills/productivity/panel"
   ]
 }
