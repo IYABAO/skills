@@ -23,7 +23,7 @@ npx skills add IYABAO/skills
 |---|---|
 | **drill** | Given a word/concept/domain, produce an expert-level learning roadmap: 5-7 dimensions, L1/L2/L3 depth, shortest path, scenario-based self-tests, resource map with links, common pitfalls, expert vs amateur dividing line. |
 | **liken** | Given things you love (books/movies/music/apps/coffee/cities), extract taste dimensions and find cross-domain recommendations with "why it's like that". |
-| **formation-learning** | Decompose any knowledge domain into a football team (formation), with ELI5 player cards, coach's tactics board, and a rendered SVG formation diagram. |
+| **knowpitch** | Decompose any knowledge domain into a football team (formation), with ELI5 player cards, coach's tactics board, and a rendered SVG formation diagram. Triggers: kp11/kpt/kpitch. |
 
 ## Development
 

@@ -1,7 +1,7 @@
 {
   "name": "iyabao-skills",
   "version": "0.1.0",
-  "description": "Learning & thinking skills by IYABAO: drill (expert roadmap), liken (cross-domain taste matching), formation-learning (football-tactic knowledge decomposition).",
+  "description": "Learning & thinking skills by IYABAO: drill (expert roadmap), liken (cross-domain taste matching), knowpitch (football-tactic knowledge decomposition).",
   "author": {
     "name": "林壮 (IYABAO)",
     "githubUsername": "IYABAO"
@@ -10,6 +10,6 @@
   "skills": [
     "skills/learning/drill",
     "skills/learning/liken",
-    "skills/learning/formation-learning"
+    "skills/learning/knowpitch"
   ]
 }
