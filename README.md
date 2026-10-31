@@ -33,13 +33,48 @@ npx skills add IYABAO/skills
 | **panel** | Multi-role plan review. Before you commit, stress-test your plan from 3-4 angles: user view, devil's advocate, tech realist, future view. Each role must find a real problem; final output separates must-fix from nice-to-know. |
 | **baton** | Project handoff. When you're done or switching agents, scan the project and write a complete HANDOVER.md: what it is, how to run it, current state, TODO, key decisions, pitfalls. Next person starts without reading chat history. |
 
+## Quick examples
+
+**drill** — "drill 向量数据库"
+→ 输出：5-7 个维度（索引原理/查询性能/一致性/运维/成本），每个维度 L1/L2/L3，20 小时速成路径，自测题，资源链接，新手坑。
+
+**liken** — "我喜欢《百年孤独》和 Node.js 的事件循环"
+→ 品味维度：魔幻现实感/异步链式/非线性叙事。跨域推荐：博尔赫斯《小径分岔的花园》、RxJS、《云图》。
+
+**knowpitch** — "kp11 机器学习"
+→ 输出 4-2-3-1 阵型：主教练=从数据到泛化，GK=线性代数，CB=概率论，CDM=梯度下降，CAM=偏差方差权衡，CF=泛化误差，SVG 阵型图。
+
+**spar** — "spar Go 并发"
+→ 出题："goroutine 和线程的区别？" 答完追问："那 GMP 模型里 M 阻塞了怎么办？" 再追问："channel 关闭后还能收吗？" 最后评分卡。
+
+**poke** — "我觉得微服务一定比单体好"
+→ "你说的'一定'，在什么规模下不成立？" 答完再问："那两个服务频繁调用怎么办？" 直到你自己发现边界。
+
+**trace** — "trace：订单接口昨天凌晨慢了 5 秒又自己好了"
+→ 先问现象，沿因果链倒推：慢查询？GC？连接池？DNS？每层要证据，区分根因/触发条件/症状，最后给止血+根治+防复发。
+
+**vet** — "vet 这篇文章说 Redis 单线程是因为网络 IO 瓶颈"
+→ 审查：证据来源？是否混淆了 Redis 6.0 前/后？逻辑跳步？反方论点？可信度评级：中。
+
+**memo** — "记一下：我们决定用 Postgres 因为 JSONB"
+→ 自动更新 MEMO.md 的"关键决策"段，追加不覆盖，git commit。
+
+**pulse** — "pulse 一下"
+→ 输出 5 段 ≤12 行：正在做 X、今天完成 Y、接下来 Z、等你做 W、一句话主线。
+
+**panel** — "panel：我要 Go 重写整个 Python 后端"
+→ 用户视角/魔鬼代言人/技术现实派/未来视角各挑一个真问题，最后分必须改/可讨论/可忽略。
+
+**baton** — "baton"
+→ 扫项目生成 HANDOVER.md：怎么跑、做到哪、关键决策、坑、接手第一件事，git commit。
+
 ## Development
 
 ```bash
 # Run validation (also runs on every PR via GitHub Actions)
 python scripts/validate.py
 
-# Run LLM evals (requires OPENAI_API_KEY, manual trigger)
+# Run LLM evals (requires OPENAI_API_KEY; runs automatically on push/PR)
 OPENAI_API_KEY=sk-... python scripts/run-evals.py
 ```
 

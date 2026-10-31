@@ -7,7 +7,7 @@ license: MIT
 category: learning
 compatibility: "Requires Python 3.8+ for SVG generation."
 tags: [learning, education, visualization, eli5, football-formation]
-description: "用足球阵型把知识领域拆解成一支球队来深入学习与讲透。触发 kp11/kpt/kpitch/knowpitch 加主题；kps 加主题=自测出题。产出阵型图 SVG、ELI5 风格球员卡与教练战术板；kps 模式出 10 道分层自测题（L1/L2/L3）+ 评分解题 + 阵型体检。Do NOT use for 快速概念解释（用 ELI5）、思维导图、闪卡、非知识类主题（情感/咨询）、需要精确数据的报告。"
+description: "[别名：阵型] 用足球阵型把知识领域拆解成一支球队来深入学习与讲透。触发 kp11/kpt/kpitch/knowpitch 加主题；kps 加主题=自测出题。产出阵型图 SVG、ELI5 风格球员卡与教练战术板；kps 模式出 10 道分层自测题（L1/L2/L3）+ 评分解题 + 阵型体检。Do NOT use for 快速概念解释（用 ELI5）、思维导图、闪卡、非知识类主题（情感/咨询）、需要精确数据的报告。"
 allowed-tools: "Bash (python3:*, python:*, py:*) Read Write Glob"
 ---
 

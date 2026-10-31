@@ -83,9 +83,9 @@ def run_case(skill_name: str, skill_md: str, case: dict, model: str, judge_model
         model,
     )
 
-    # Step 2: Judge each assertion
+    # Step 2: Judge each assertion — ask for JSON output, parse it
     assertions_text = "\n".join(f"{i+1}. {a}" for i, a in enumerate(case["assertions"]))
-    judge_prompt = f"""You are a strict evaluator. Below is the output of an AI skill. Check each assertion and answer PASS or FAIL with a brief reason.
+    judge_prompt = f"""You are a strict evaluator. Below is the output of an AI skill. Check each assertion.
 
 SKILL: {skill_name}
 USER REQUEST: {case['prompt']}
@@ -97,20 +97,34 @@ OUTPUT:
 ASSERTIONS:
 {assertions_text}
 
-For each assertion, respond in this exact format:
-ASSERTION <number>: PASS or FAIL — <one sentence reason>
+Return ONLY a JSON array, no other text. Each element:
+{{"id": <assertion number>, "pass": true/false, "reason": "<one sentence>"}}
 """
     judge_result = call_llm(
         [{"role": "user", "content": judge_prompt}],
         judge_model,
     )
 
-    # Parse results
+    # Parse JSON from judge output (handle code fences)
     passed = 0
     total = len(case["assertions"])
-    for line in judge_result.strip().split("\n"):
-        if "PASS" in line:
-            passed += 1
+    detail_lines = []
+    try:
+        # Strip code fences if present
+        cleaned = judge_result.strip()
+        if cleaned.startswith("```"):
+            cleaned = cleaned.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+        results = json.loads(cleaned)
+        for r in results:
+            aid = r.get("id", "?")
+            ok = r.get("pass", False)
+            reason = r.get("reason", "")
+            if ok:
+                passed += 1
+            detail_lines.append(f"  ASSERTION {aid}: {'PASS' if ok else 'FAIL'} — {reason}")
+    except (json.JSONDecodeError, KeyError, TypeError) as e:
+        detail_lines.append(f"  WARN: judge output not parseable: {e}")
+        detail_lines.append(f"  Raw: {judge_result[:200]}")
 
     return {
         "id": case["id"],
@@ -119,7 +133,7 @@ ASSERTION <number>: PASS or FAIL — <one sentence reason>
         "passed": passed,
         "total": total,
         "output_length": len(output),
-        "judge_detail": judge_result,
+        "judge_detail": "\n".join(detail_lines),
     }
 
 

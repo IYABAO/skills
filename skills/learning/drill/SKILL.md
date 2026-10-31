@@ -1,6 +1,6 @@
 ---
 name: drill
-description: "拿到一个词/概念/领域，联网搜索权威资源，产出从外行到专家的学习地图：5-7 个核心维度（地基/核心/进阶）、每维度 L1/L2/L3 三层深度、最短学习路径、场景化自测题、带链接的资源地图、新手 3 坑、专家与半吊子分水岭。触发 drill / 钻取 / 深挖 / 深度学习 / 吃透 + 主题；产出可执行学习路线图。Do NOT use for ELI5 讲知识本身（用 formation-learning/knowpitch）、纯事实查询、要写完整文章（用写作类 skill）。"
+description: "[别名：深挖] 拿到一个词/概念/领域，联网搜索权威资源，产出从外行到专家的学习地图：5-7 个核心维度（地基/核心/进阶）、每维度 L1/L2/L3 三层深度、最短学习路径、场景化自测题、带链接的资源地图、新手 3 坑、专家与半吊子分水岭。触发 drill / 钻取 / 深挖 / 深度学习 / 吃透 + 主题；产出可执行学习路线图。Do NOT use for ELI5 讲知识本身（用 formation-learning/knowpitch）、纯事实查询、要写完整文章（用写作类 skill）。"
 license: MIT
 allowed-tools: "Read WebSearch"
 metadata:
