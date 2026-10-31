@@ -28,6 +28,7 @@ npx skills add IYABAO/skills
 | **poke** | Socratic questioning. Given your own argument/decision, ask one follow-up at a time until you find the logical hole yourself. No preaching, no answers handed over. |
 | **trace** | Root cause analysis. Given a bug/incident/alert, walk the causal chain backward layer by layer, requiring evidence at each step. Distinguishes root cause from trigger from symptom. |
 | **vet** | Information review. Given an article/paper/tech proposal/blog post, produce a vetting report: evidence quality, logic gaps, hidden assumptions, strongest counter-argument, author conflicts of interest. |
+| **memo** | File memory & context persistence. Auto-creates MEMO.md in project root (current state / done / next / waiting on user / key decisions), updates at decision points, auto-commits to git. Never lose context between sessions or agents. |
 
 ## Development
 
