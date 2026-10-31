@@ -8,7 +8,7 @@
     {
       "name": "iyabao-skills",
       "source": "./",
-      "description": "Learning & thinking skills: drill (expert roadmap), liken (cross-domain taste), knowpitch (football-tactic knowledge)."
+      "description": "Learning & thinking skills: drill (expert roadmap), liken (cross-domain taste), knowpitch (football-tactic knowledge), spar (mock interview), poke (Socratic questioning), trace (root cause), vet (info review)."
     }
   ]
 }
