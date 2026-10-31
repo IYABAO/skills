@@ -123,13 +123,25 @@ ASSERTION <number>: PASS or FAIL — <one sentence reason>
     }
 
 
+def discover_skills():
+    """Discover skills by scanning evals/ directory for *.evals.json files."""
+    skills = []
+    for f in sorted(EVALS_DIR.glob("*.evals.json")):
+        skills.append(f.stem.replace(".evals", ""))
+    return skills
+
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--skill", help="Run only this skill (drill, liken, knowpitch)")
+    parser.add_argument("--skill", help="Run only this skill")
     parser.add_argument("--dry-run", action="store_true", help="List cases without calling LLM")
     args = parser.parse_args()
 
-    skills = [args.skill] if args.skill else ["drill", "liken", "knowpitch"]
+    all_skills = discover_skills()
+    if args.skill:
+        skills = [args.skill]
+    else:
+        skills = all_skills
     model = os.environ.get("EVAL_MODEL", "gpt-4o-mini")
     judge_model = os.environ.get("JUDGE_MODEL", "gpt-4o-mini")
 
