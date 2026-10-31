@@ -1,37 +1,63 @@
 # IYABAO Skills
 
-Learning & thinking skills for AI agents. Install one plugin, get a set of composable skills.
+> A **Claude Code plugin marketplace** — install one plugin, get 11 composable learning, thinking & workflow skills.
+>
+> [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+> [![Version](https://img.shields.io/badge/version-0.5.0-orange.svg)](.claude-plugin/plugin.json)
+> [![CI](https://github.com/IYABAO/skills/actions/workflows/ci.yml/badge.svg)](https://github.com/IYABAO/skills/actions)
 
 ## Install
 
-### Claude Code
-
 ```bash
+# Claude Code — one command, installs all 11 skills
 /plugin marketplace add IYABAO/skills
 /plugin install iyabao-skills@iyabao-skills
 ```
 
-### skills.sh CLI
-
 ```bash
+# skills.sh CLI
 npx skills add IYABAO/skills
 ```
 
+## What's inside
+
+```
+.claude-plugin/
+├── plugin.json          # ← plugin definition: name, version, skills[]
+└── marketplace.json     # ← marketplace listing (this repo IS the marketplace)
+skills/
+├── learning/            # 7 skills: how to learn & think
+│   ├── drill/           #   expert roadmap
+│   ├── liken/           #   cross-domain taste
+│   ├── knowpitch/       #   football-tactic knowledge breakdown
+│   ├── spar/            #   mock technical interview
+│   ├── poke/            #   Socratic questioning
+│   ├── trace/           #   root cause analysis
+│   └── vet/             #   information review
+└── productivity/        # 4 skills: how to work & hand off
+    ├── memo/            #   file memory (never lose context)
+    ├── pulse/           #   30s progress report
+    ├── panel/           #   multi-role plan review
+    └── baton/           #   complete project handoff
+```
+
+This repo is both the **plugin** and the **marketplace**: `.claude-plugin/plugin.json` lists all 11 skills, `.claude-plugin/marketplace.json` registers it for discovery. Matt Pocock's [skills](https://github.com/mattpocock/skills) is the engineering counterpart — install both, they don't overlap.
+
 ## Included skills
 
-| Skill | What it does |
-|---|---|
-| **drill** | Given a word/concept/domain, produce an expert-level learning roadmap: 5-7 dimensions, L1/L2/L3 depth, shortest path, scenario-based self-tests, resource map with links, common pitfalls, expert vs amateur dividing line. |
-| **liken** | Given things you love (books/movies/music/apps/coffee/cities), extract taste dimensions and find cross-domain recommendations with "why it's like that". |
-| **knowpitch** | Decompose any knowledge domain into a football team (formation), with ELI5 player cards, coach's tactics board, and a rendered SVG formation diagram. Triggers: kp11/kpt/kpitch. |
-| **spar** | Mock technical interview. Given a direction (Go concurrency / system design / databases), ask one question, follow up relentlessly, then give a scorecard. No answers fed during the drill. |
-| **poke** | Socratic questioning. Given your own argument/decision, ask one follow-up at a time until you find the logical hole yourself. No preaching, no answers handed over. |
-| **trace** | Root cause analysis. Given a bug/incident/alert, walk the causal chain backward layer by layer, requiring evidence at each step. Distinguishes root cause from trigger from symptom. |
-| **vet** | Information review. Given an article/paper/tech proposal/blog post, produce a vetting report: evidence quality, logic gaps, hidden assumptions, strongest counter-argument, author conflicts of interest. |
-| **memo** | File memory & context persistence. Auto-creates MEMO.md in project root (current state / done / next / waiting on user / key decisions), updates at decision points, auto-commits to git. Never lose context between sessions or agents. |
-| **pulse** | 30-second progress report. Reads project files (AGENTS.md/active/daily) or conversation context, outputs a fixed 5-section status: doing / done today / next / waiting on you / one-line summary. |
-| **panel** | Multi-role plan review. Before you commit, stress-test your plan from 3-4 angles: user view, devil's advocate, tech realist, future view. Each role must find a real problem; final output separates must-fix from nice-to-know. |
-| **baton** | Project handoff. When you're done or switching agents, scan the project and write a complete HANDOVER.md: what it is, how to run it, current state, TODO, key decisions, pitfalls. Next person starts without reading chat history. |
+| Skill | CN alias | What it does |
+|---|---|---|
+| **drill** | 深挖 | Given a word/concept/domain, produce an expert-level learning roadmap: 5-7 dimensions, L1/L2/L3 depth, shortest path, scenario-based self-tests, resource map with links, common pitfalls, expert vs amateur dividing line. |
+| **liken** | 知音 | Given things you love (books/movies/music/apps/coffee/cities), extract taste dimensions and find cross-domain recommendations with "why it's like that". |
+| **knowpitch** | 阵型 | Decompose any knowledge domain into a football team (formation), with ELI5 player cards, coach's tactics board, and a rendered SVG formation diagram. Triggers: kp11/kpt/kpitch. |
+| **spar** | 对练 | Mock technical interview. Given a direction (Go concurrency / system design / databases), ask one question, follow up relentlessly, then give a scorecard. No answers fed during the drill. |
+| **poke** | 追问 | Socratic questioning. Given your own argument/decision, ask one follow-up at a time until you find the logical hole yourself. No preaching, no answers handed over. |
+| **trace** | 追因 | Root cause analysis. Given a bug/incident/alert, walk the causal chain backward layer by layer, requiring evidence at each step. Distinguishes root cause from trigger from symptom. |
+| **vet** | 审源 | Information review. Given an article/paper/tech proposal/blog post, produce a vetting report: evidence quality, logic gaps, hidden assumptions, strongest counter-argument, author conflicts of interest. |
+| **memo** | 备忘 | File memory & context persistence. Auto-creates MEMO.md in project root (current state / done / next / waiting on user / key decisions), updates at decision points, auto-commits to git. Never lose context between sessions or agents. |
+| **pulse** | 报进度 | 30-second progress report. Reads project files (AGENTS.md/active/daily) or conversation context, outputs a fixed 5-section status: doing / done today / next / waiting on you / one-line summary. |
+| **panel** | 评审 | Multi-role plan review. Before you commit, stress-test your plan from 3-4 angles: user view, devil's advocate, tech realist, future view. Each role must find a real problem; final output separates must-fix from nice-to-know. |
+| **baton** | 交接 | Project handoff. When you're done or switching agents, scan the project and write a complete HANDOVER.md: what it is, how to run it, current state, TODO, key decisions, pitfalls. Next person starts without reading chat history. |
 
 ## Quick examples
 
