@@ -1,7 +1,7 @@
 {
   "name": "iyabao-skills",
-  "version": "0.4.0",
-  "description": "Learning, thinking, and workflow skills by IYABAO: drill (expert roadmap), liken (cross-domain taste), knowpitch (football-tactic knowledge), spar (mock interview), poke (Socratic questioning), trace (root cause analysis), vet (information review), memo (file memory), pulse (progress report), panel (multi-role plan review).",
+  "version": "0.5.0",
+  "description": "Learning, thinking, and workflow skills by IYABAO: drill, liken, knowpitch, spar, poke, trace, vet, memo, pulse, panel, wake (11 skills).",
   "author": {
     "name": "林壮 (IYABAO)",
     "githubUsername": "IYABAO"
@@ -17,6 +17,7 @@
     "skills/learning/vet",
     "skills/productivity/memo",
     "skills/productivity/pulse",
-    "skills/productivity/panel"
+    "skills/productivity/panel",
+    "skills/productivity/baton"
   ]
 }

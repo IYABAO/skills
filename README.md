@@ -31,6 +31,7 @@ npx skills add IYABAO/skills
 | **memo** | File memory & context persistence. Auto-creates MEMO.md in project root (current state / done / next / waiting on user / key decisions), updates at decision points, auto-commits to git. Never lose context between sessions or agents. |
 | **pulse** | 30-second progress report. Reads project files (AGENTS.md/active/daily) or conversation context, outputs a fixed 5-section status: doing / done today / next / waiting on you / one-line summary. |
 | **panel** | Multi-role plan review. Before you commit, stress-test your plan from 3-4 angles: user view, devil's advocate, tech realist, future view. Each role must find a real problem; final output separates must-fix from nice-to-know. |
+| **baton** | Project handoff. When you're done or switching agents, scan the project and write a complete HANDOVER.md: what it is, how to run it, current state, TODO, key decisions, pitfalls. Next person starts without reading chat history. |
 
 ## Development
 
