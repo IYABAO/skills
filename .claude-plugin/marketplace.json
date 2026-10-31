@@ -1,0 +1,14 @@
+{
+  "name": "iyabao-skills",
+  "owner": {
+    "name": "林壮 (IYABAO)",
+    "githubUsername": "IYABAO"
+  },
+  "plugins": [
+    {
+      "name": "iyabao-skills",
+      "source": "./",
+      "description": "Learning & thinking skills: drill (expert roadmap), liken (cross-domain taste), formation-learning (football-tactic knowledge)."
+    }
+  ]
+}
