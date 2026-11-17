@@ -94,9 +94,25 @@ This repo is both the **plugin** and the **marketplace**: `.claude-plugin/plugin
 **baton** — "baton"
 → 扫项目生成 HANDOVER.md：怎么跑、做到哪、关键决策、坑、接手第一件事，git commit。
 
+## Which skill should I use?
+
+When a task could fit several skills, let the router pick the first one and show why:
+
+```bash
+python scripts/which_skill.py "线上订单接口昨天慢 5 秒，帮我查根因"
+# 首选：trace 追因 (trace)  分数 16
+# 命中：根因、线上排查
+# 调用：trace 线上订单接口昨天慢 5 秒，帮我查根因
+```
+
+Add `--json` for scripts, `--list` to see all 11 skills. It is offline and only reads the plugin manifest and `SKILL.md` frontmatter.
+
 ## Development
 
 ```bash
+# Run unit tests (also runs on every PR via GitHub Actions)
+python -m unittest discover -s tests -v
+
 # Run validation (also runs on every PR via GitHub Actions)
 python scripts/validate.py
 
